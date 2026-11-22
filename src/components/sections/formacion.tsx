@@ -6,6 +6,7 @@ import {
   porArea,
   totalCertificaciones,
 } from "@/data/estudios";
+import { CertificadoVisor } from "../certificado-visor";
 import { WhatsappButton } from "../whatsapp-button";
 
 const stagger = (i: number) => ({ "--reveal-delay": `${Math.min(i, 4) * 50}ms` }) as CSSProperties;
@@ -29,7 +30,7 @@ export function Formacion() {
           <p className="mt-6 max-w-prose text-[1.0625rem]" data-reveal>
             {totalCertificaciones} certificaciones de Gualda Training en musculación, salud, nutrición y entrenamiento
             online. Varias llevan además el sello de ALIFID, la Alianza Latinoamericana de Instructores de Fitness y
-            Deporte.
+            Deporte. Podés ver cada certificado; las firmas de los docentes están difuminadas.
           </p>
         </div>
 
@@ -41,6 +42,11 @@ export function Formacion() {
               </span>
               <h3 className="mt-4 font-display text-2xl leading-tight font-bold sm:text-[1.75rem]">{c.titulo}</h3>
               {c.detalle && <p className="mt-3 text-[0.95rem]">{c.detalle}</p>}
+              {c.imagen && (
+                <div className="mt-6">
+                  <CertificadoVisor titulo={c.titulo} imagen={c.imagen} variante="miniatura" />
+                </div>
+              )}
               <div className="mt-auto pt-6">
               <p className="flex flex-wrap justify-between gap-x-4 gap-y-1 border-t border-carbon/20 pt-4 text-sm font-medium">
                 <span>{emisorLabel(c)}</span>
@@ -78,6 +84,7 @@ export function Formacion() {
                       </p>
                       {c.detalle && <p className="mt-1 text-sm">{c.detalle}</p>}
                       <p className="mt-1 text-sm text-carbon/75">{emisorLabel(c)}</p>
+                      {c.imagen && <CertificadoVisor titulo={c.titulo} imagen={c.imagen} variante="enlace" />}
                     </div>
                     <time dateTime={c.fecha} className="pt-0.5 text-sm font-medium whitespace-nowrap tabular-nums">
                       {formatearFecha(c.fecha)}

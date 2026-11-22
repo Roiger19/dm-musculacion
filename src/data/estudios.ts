@@ -34,6 +34,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "certificacion",
     destacada: true,
+    imagen: { src: "/images/certificados/master-personal-trainer.webp", width: 1200, height: 848 },
   },
   {
     id: "instructor-avanzado-fitness",
@@ -46,6 +47,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "certificacion",
     destacada: true,
+    imagen: { src: "/images/certificados/instructor-avanzado-fitness.webp", width: 1200, height: 848 },
   },
   {
     id: "personal-trainer-musculacion",
@@ -56,6 +58,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/personal-trainer-musculacion.webp", width: 1200, height: 848 },
   },
   {
     id: "musculacion-hipertrofia",
@@ -66,6 +69,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/musculacion-hipertrofia.webp", width: 1200, height: 848 },
   },
   {
     id: "biomecanica",
@@ -76,6 +80,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/biomecanica.webp", width: 1200, height: 848 },
   },
   {
     id: "entrenamiento-gluteos",
@@ -86,6 +91,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/entrenamiento-gluteos.webp", width: 1200, height: 848 },
   },
   {
     id: "webinar-hipertrofia-fuerza",
@@ -96,6 +102,7 @@ export const credenciales = [
     area: "musculacion",
     tipo: "asistencia",
     destacada: false,
+    imagen: { src: "/images/certificados/webinar-hipertrofia-fuerza.webp", width: 1200, height: 676 },
   },
   {
     id: "funcional-hiit-gap",
@@ -107,6 +114,7 @@ export const credenciales = [
     area: "funcional",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/funcional-hiit-gap.webp", width: 1200, height: 848 },
   },
   {
     id: "salud-personal-trainer",
@@ -117,6 +125,7 @@ export const credenciales = [
     area: "salud",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/salud-personal-trainer.webp", width: 1200, height: 848 },
   },
   {
     id: "lesiones-deportivas",
@@ -127,6 +136,7 @@ export const credenciales = [
     area: "salud",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/lesiones-deportivas.webp", width: 1200, height: 848 },
   },
   {
     id: "reanimacion-cardiopulmonar",
@@ -138,6 +148,7 @@ export const credenciales = [
     area: "salud",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/reanimacion-cardiopulmonar.webp", width: 1200, height: 848 },
   },
   {
     id: "nutricion-deportiva",
@@ -148,6 +159,7 @@ export const credenciales = [
     area: "nutricion",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/nutricion-deportiva.webp", width: 1200, height: 848 },
   },
   {
     id: "sueno-rendimiento",
@@ -158,6 +170,7 @@ export const credenciales = [
     area: "nutricion",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/sueno-rendimiento.webp", width: 1200, height: 848 },
   },
   {
     id: "entrenamiento-online",
@@ -169,6 +182,7 @@ export const credenciales = [
     area: "online",
     tipo: "certificacion",
     destacada: false,
+    imagen: { src: "/images/certificados/entrenamiento-online.webp", width: 1200, height: 848 },
   },
 ] as const satisfies readonly Credencial[];
 

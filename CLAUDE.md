@@ -87,4 +87,4 @@ npm run build        # build de producción
 - Videos originales en mejor resolución (los actuales vienen de WhatsApp a 480×848).
 - Deploy en Vercel (repo GitHub de Roiger19). El dominio sale de `VERCEL_PROJECT_PRODUCTION_URL`; si se conecta un dominio propio, se toma solo.
 - Logo en SVG para piezas grandes (hoy hay PNG derivados del JPEG original, nítidos hasta ~440 px de ancho).
-- Imágenes de certificados: exportar los PDF a WebP con firmas difuminadas (no hay renderizador de PDF instalado).
+- Resuelto (2026-11-22): los 14 certificados están en `public/images/certificados/` (WebP 1200 px, sin metadatos, firmas manuscritas difuminadas en 13; el webinar no tiene firmas). PDF renderizados con la API nativa de Windows (`Windows.Data.Pdf`) desde PowerShell.

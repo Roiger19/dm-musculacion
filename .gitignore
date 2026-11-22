@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# material fuente del cliente (no se publica)
+/certificados/
+/assets/
+/medios-fuente/**
+!/medios-fuente/LEEME.md
+!/medios-fuente/*/
+!/medios-fuente/*/.gitkeep

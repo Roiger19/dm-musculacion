@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-*: initial; /* solo existen los colores de marca */
+  --color-menta: #9ce3cd;
+  --color-carbon: #172421;
+  --color-blanco: #ffffff;
+  --color-esmeralda: #5ab59b;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-montserrat);
+  --font-accent: var(--font-raleway);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-padding-top: 1.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-blanco);
+    color: var(--color-carbon);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Foco visible: carbón sobre claro, menta sobre oscuro. */
+  :focus-visible {
+    outline: 2px solid var(--color-carbon);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  [data-tone="dark"] :focus-visible {
+    outline-color: var(--color-menta);
+  }
+
+  ::selection {
+    background: var(--color-menta);
+    color: var(--color-carbon);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------- Movimiento (dm-branding §9) ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Entrada del hero: CSS puro, no depende de JS. Secuencia total ≤ 900 ms. */
+  @keyframes rise {
+    from {
+      opacity: 0;
+      translate: 0 12px;
+    }
+  }
+  .hero-rise {
+    animation: rise 520ms var(--ease-out-strong) both;
+    animation-delay: var(--rise-delay, 0ms);
+  }
+}
+
+/* Reveal al hacer scroll: solo se oculta si hay JS y movimiento permitido. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    transition:
+      opacity 420ms var(--ease-out-strong),
+      translate 420ms var(--ease-out-strong);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  [data-reveal]:not([data-revealed]) {
+    opacity: 0;
+    translate: 0 12px;
+  }
+}
+
+/* Subrayado que crece desde la izquierda (enlaces de texto). */
+.link-grow {
+  position: relative;
+}
+.link-grow::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .link-grow::after {
+    transform: scaleX(0);
+    transition: transform 220ms var(--ease-out-strong);
+  }
+  .link-grow:hover::after,
+  .link-grow:focus-visible::after {
+    transform: scaleX(1);
+  }
 }

@@ -30,7 +30,7 @@ export function Formacion() {
           <p className="mt-6 max-w-prose text-[1.0625rem]" data-reveal>
             {totalCertificaciones} certificaciones de Gualda Training en musculación, salud, nutrición y entrenamiento
             online. Varias llevan además el sello de ALIFID, la Alianza Latinoamericana de Instructores de Fitness y
-            Deporte. Podés ver cada certificado; las firmas de los docentes están difuminadas.
+            Deporte.
           </p>
         </div>
 

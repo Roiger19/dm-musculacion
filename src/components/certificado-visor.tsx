@@ -17,7 +17,7 @@ type Props = {
 export function CertificadoVisor({ titulo, imagen, variante }: Props) {
   const ref = useRef<HTMLDialogElement>(null);
   const [abierto, setAbierto] = useState(false);
-  const alt = `Certificado: ${titulo} (firmas difuminadas)`;
+  const alt = `Certificado: ${titulo}`;
 
   function abrir() {
     setAbierto(true);

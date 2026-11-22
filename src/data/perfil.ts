@@ -35,7 +35,7 @@ export const perfil = {
     eyebrow: "Sobre mí",
     titulo: "Tu objetivo marca el plan.",
     bio: [
-      "Soy Daniel Alejandro Sánchez, Master Personal Trainer e Instructor Avanzado en Fitness y Actividad Física. Mi trabajo empieza por una pregunta simple: ¿qué querés lograr?",
+      "Mi trabajo empieza escuchándote: qué querés lograr, desde dónde arrancás y cuánto tiempo tenés. Con eso armo tu plan, apoyado en mi formación como Master Personal Trainer e Instructor Avanzado en Fitness y Actividad Física.",
       "Ganar masa muscular, sumar fuerza, mejorar tu composición corporal o volver a entrenar cuidando tu salud: cada objetivo pide un plan distinto. Lo armo con base en biomecánica, hipertrofia, nutrición deportiva y prevención de lesiones, y lo ajusto a medida que avanzás.",
       "No se trata solo de pasarte una rutina. Te enseño a ejecutar cada ejercicio con buena técnica, a entender por qué hacés lo que hacés y a sostenerlo en el tiempo.",
     ],

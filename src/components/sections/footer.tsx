@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/data/site";
 import { whatsappUrl } from "@/data/whatsapp";
 import { ExternalLink } from "../external-link";
@@ -35,8 +36,13 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-blanco/15 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {site.anio} {site.marca}. {site.eslogan}.
+          <p className="flex flex-wrap items-center gap-x-4">
+            <span>
+              © {site.anio} {site.marca}. {site.eslogan}.
+            </span>
+            <Link href="/privacidad" className="inline-flex min-h-11 items-center sm:min-h-0">
+              <span className="link-grow">Privacidad</span>
+            </Link>
           </p>
           <p>
             Desarrollado por{" "}

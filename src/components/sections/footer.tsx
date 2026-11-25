@@ -36,7 +36,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-blanco/15 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <p className="flex flex-wrap items-center gap-x-4">
+          <p className="flex flex-col items-start sm:gap-1">
             <span>
               © {site.anio} {site.marca}. {site.eslogan}.
             </span>
